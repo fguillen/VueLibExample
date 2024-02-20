@@ -3,6 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-lib-example.umd.cjs",
+  "module": "./dist/vue-lib-example.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-lib-example.js",
+      "require": "./dist/vue-lib-example.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
