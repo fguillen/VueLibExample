@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+
+    <link rel="stylesheet" href="/dist/style.css">
+  </head>
+  <body>
+    <div id="the-div"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import { createApp } from 'vue';
+      import { App as VueLibExample } from '/dist/vue-lib-example.js';
+
+      createApp(VueLibExample).mount('#the-div');
+    </script>
+  </body>
+</html>
