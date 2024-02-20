@@ -1,7 +1,10 @@
 Example of how to export a Vue project in library mode, so it can be integrated in any HTML page.
 
+[Example demo](https://fguillen.github.io/VueLibExample/example_integration.html)
 
 ## 1. Minimize the main.ts (main.js)
+
+[Commit](https://github.com/fguillen/VueLibExample/commit/bfa754684a546641551a714b95839ef1aa5854eb)
 
 Don't create the App there, and not mount it.
 Just import it and export it.
@@ -15,6 +18,8 @@ export { App }
 ```
 
 ## 2. Adapt your dev index.html
+
+[Commit](https://github.com/fguillen/VueLibExample/commit/6b6899f2dc3aa90e071834af49e7d3e622782f86)
 
 Now the main.ts is very passive so we have to trigger the app creation and mounting it manually in our dev `index.html`. This is also what have to be done when the lib is integrated in another app.
 
@@ -36,6 +41,8 @@ Now the main.ts is very passive so we have to trigger the app creation and mount
 We are using an alias to avoid conflict with another imported apps.
 
 ## 3. The library mode build
+
+[Commit](https://github.com/fguillen/VueLibExample/commit/d7c96aa26658ab3ed40ce92813c1fddebce7d12c)
 
 The main concept is **"build your app using library mode"**. Here is the [documentation to do this with Vite](https://vitejs.dev/guide/build#library-mode).
 
@@ -148,6 +155,8 @@ dist/vue-lib-example.umd.cjs  1.83 kB │ gzip: 0.95 kB
 ```
 
 ## 4. Integrating the lib in a HTML page
+
+[Commit](https://github.com/fguillen/VueLibExample/commit/77600c3c879cd57abb3accf22c3509d9f7fc9319)
 
 Once we have the exported files we can use them in any HTML web page like this:
 
